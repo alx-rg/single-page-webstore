@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import data, { allCategories, productCount, categories, namesAndCategories, catNameArray } from "./data"
 
 function App() {
+
+  console.log(categories)
+  console.log(namesAndCategories)
+  console.log(catNameArray)
+  console.log(allCategories)
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          Product List
+        </h1>
       </header>
+        {catNameArray.map(obj => {
+          return(
+            <button>{obj.name}
+            <span> {obj.count}</span>
+            </button>
+          )
+          })
+        }
+        <p>Product Count: {productCount}</p>
+        <p>Category Count: {catNameArray.length}</p>
     </div>
   );
 }
