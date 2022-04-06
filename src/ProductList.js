@@ -1,25 +1,22 @@
 import data from './data';
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
+import Product from './Product';
 import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 import './ProductList.css';
 
-function ProductList() {
+function ProductList(props) {
+
+  const { category } = props
+
   return (
     <Container className="p-4, pt-5">
     <Row className='ProductList'>
-      {data.map(obj => {
+      {data.filter(obj => obj.category === category || category === "All" ).map(obj => {
+
         return(
-          <div>
-            <Card className='p-4'>
-              <h3>{obj.name}</h3>
-              <span>{obj.description}</span>
-              <em>Rating: {obj.rating}</em>
-              <span>Price: {obj.price}</span>
-              <small>Category: {obj.category}</small>
-            </Card>
-          </div>
+
+          <Product { ... obj } />
         )
       })}
     </Row>

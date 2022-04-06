@@ -16,3 +16,16 @@
   background-color: rgba(0, 163, 163, 0.189);
 }
 
+button.selected {
+  background-color: white;
+  color: rgba(0, 163, 163, 0.909);
+}
+
+.highlight {
+  color: rgb(255, 0, 0);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgba(188, 250, 188, 0.415);
+  border-radius: 50px;
+  border: rgba(0, 0, 0, 0.136) solid 2px;
+  font-weight: bold;
+}

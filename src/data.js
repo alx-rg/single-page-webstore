@@ -55,6 +55,8 @@ const catNameArray = Object.keys(namesAndCategories).map(cat => {
 } )
 // [ "Toys", "Books", "Kids"]
 
+catNameArray.push({ name: "All", count: data.length})
+
 export {
   allCategories,
   productCount,
